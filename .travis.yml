@@ -9,11 +9,12 @@ addons:
     sources:
     - ubuntu-toolchain-r-test
     packages:
-    - g++-5.4
+    - gcc-5
+    - g++-5
     - ninja-build
 
-install:
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then export CC="gcc-5.4"; export CXX="g++-5.4"; fi
+#install:
+#  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then export CC="gcc-5.4"; export CXX="g++-5.4"; fi
 
 script:
   - mkdir build
