@@ -1,0 +1,9 @@
+language: cpp
+
+compiler:
+  - gcc
+
+script:
+  - mkdir build
+  - cd build
+  - cmake -DENABLE_ADE_TESTING=ON -DBUILD_ADE_TUTORIAL=ON .. && make && ctest
