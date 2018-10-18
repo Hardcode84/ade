@@ -7,8 +7,10 @@
 include(ExternalProject)
 
 if(DEFINED GTEST_ROOT)
+    message(STATUS "Use external gtest: ${GTEST_ROOT}")
     find_package(GTest REQUIRED)
 else()
+    message(STATUS "Download gtest")
     set_directory_properties(PROPERTIES EP_PREFIX ${CMAKE_BINARY_DIR}/third_party)
 
     set(GTEST_INSTALL_DIR ${CMAKE_BINARY_DIR}/third_party/gtest-bin)
