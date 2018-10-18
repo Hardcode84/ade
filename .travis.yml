@@ -14,7 +14,7 @@ addons:
     - ninja-build
 
 install:
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then export CC="gcc-5.5"; export CXX="g++-5.5"; fi
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then export CC="gcc-5"; export CXX="g++-5"; fi
 
 script:
   - mkdir build
