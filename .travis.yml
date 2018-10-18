@@ -1,3 +1,4 @@
+dist: trusty
 language: cpp
 
 compiler:
@@ -17,4 +18,4 @@ install:
 script:
   - mkdir build
   - cd build
-  - cmake -DENABLE_ADE_TESTING=ON -DBUILD_ADE_TUTORIAL=ON .. && make && ctest
+  - cmake -G Ninja -DENABLE_ADE_TESTING=ON -DBUILD_ADE_TUTORIAL=ON .. && ninja && ctest
