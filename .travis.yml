@@ -21,4 +21,7 @@ install:
 script:
   - mkdir build
   - cd build
-  - cmake -G Ninja -DENABLE_ADE_TESTING=ON -DBUILD_ADE_TUTORIAL=ON -DCMAKE_BUILD_TYPE=Release .. && ninja && ctest
+  - cmake -G Ninja -DENABLE_ADE_TESTING=ON -DBUILD_ADE_TUTORIAL=ON -DCMAKE_BUILD_TYPE=Release ..
+#  - ninja
+  - make
+  - ctest
