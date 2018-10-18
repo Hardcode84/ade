@@ -3,6 +3,17 @@ language: cpp
 compiler:
   - gcc
 
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-5.4
+    - ninja-build
+
+install:
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then export CC="gcc-5.4"; export CXX="g++-5.4"; fi
+
 script:
   - mkdir build
   - cd build
